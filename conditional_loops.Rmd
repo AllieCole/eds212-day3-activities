@@ -1,0 +1,105 @@
+---
+title: "DAy three activities"
+author: "Allie Cole"
+date: "8/11/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(tidyverse)
+```
+
+```{r}
+pm2_5 <- 48
+
+if(pm2_5 < 100) {
+  print("Low to moderate risk")
+} else if(100 <= pm2_5 & pm2_5 < 150) {
+  print("UNhealthy for sensitive groups")
+} else if( pm2_5 >= 150) {
+  print("Health risk present")
+}
+```
+
+### TAsk 2 
+
+```{r}
+species <- "blue whale" 
+
+if (str_detect(species, "whale")) {
+  print("You found a whale")
+}
+
+species <- "dolphin"
+
+if (str_detect(species, "whale")) {
+  print("You found a whale")
+} #right now if tehre no whale then it does nothing 
+```
+
+
+### Task 3
+
+```{r}
+max_airtemp_c <- 24.1 
+
+if (max_airtemp_c > 27) {
+  print("TEmperature too high")
+} else if (max_airtemp_c <= 27) {
+  print("Temperature ok")
+}
+```
+
+
+### Task 4 
+
+```{r}
+base_burrito <- 6.50 
+main_ingredient <- veggie
+
+
+if(main_ingredient == "veggie") {
+  print(base_burrito)
+} else if (main_ingredient == "chicken") {
+  print(base_burrito + 3.00)
+} else if (main_ingredient == "steak") {
+  print(base_burrito + 3.25)
+}
+
+```
+
+### TAsk 5 
+
+```{r}
+fish <- c(8, 10, 12, 23)
+
+for (i in seq_along(fish)) {
+  
+  print(fish[i] / sum(fish))
+  
+}
+```
+
+### TAsk 6 
+
+```{r}
+month.name
+
+for(i in seq_along(month.name)) {
+  print(paste(month.name[i], "is month", i))
+}
+
+```
+
+#END
+
+
+
+
+
+
+
+
+
